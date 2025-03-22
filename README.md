@@ -1,1 +1,1 @@
-# A repo for frontend learning related work.
+A repo for frontend related stuff!
