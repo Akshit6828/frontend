@@ -1,13 +1,23 @@
 import { createBrowserRouter } from "react-router-dom";
-import { LazyDashboardLayout } from "./lazy-routes";
+import {
+  LazyAnalyticsPage,
+  LazyDashboardLayout,
+  LazyDashboardPage,
+  LazyRepoPage,
+  LazySettingsPage,
+} from "./lazy-routes";
 
 export const router = createBrowserRouter([
   {
     path: "/",
-    Component: LazyDashboardLayout,
+    element: <LazyDashboardLayout />, // ✅ Correct: use element
     children: [
-      { index: true, Component: LazyDashboardLayout },
-      { path: "/view-repo-dashboard", Component: LazyDashboardLayout },
+      { index: true, element: <LazyDashboardPage /> }, // ✅ Correct: use element
+      { path: "repository", element: <LazyRepoPage /> },
+      { path: "analytics", element: <LazyAnalyticsPage /> },
+      { path: "settings", element: <LazySettingsPage /> },
     ],
   },
 ]);
+
+export default router;
