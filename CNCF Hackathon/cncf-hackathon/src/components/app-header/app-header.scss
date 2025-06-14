@@ -1,0 +1,14 @@
+/* App.css or Header.css */
+@import "../../styles/index.scss";
+.app-header {
+  background-color: var(--color-background); // Darkest (#121212)
+  color: var(--color-text-primary);
+  padding: 16px 32px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}

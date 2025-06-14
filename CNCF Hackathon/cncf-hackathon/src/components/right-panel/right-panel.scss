@@ -1,0 +1,12 @@
+@import "../../styles/colors.scss";
+
+.right-panel {
+  flex: 1;
+  padding: 20px;
+  background-color: var(--color-elevation);
+  color: var(--color-text-primary);
+
+  h1 {
+    margin-bottom: 10px;
+  }
+}

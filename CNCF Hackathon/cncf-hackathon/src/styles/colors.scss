@@ -1,0 +1,39 @@
+:root {
+  // Background Colors - VS Code Dark Theme
+  --color-background: #161616; // Darkest (header)
+  --color-surface: #1e1e1e; // Medium dark (left panel)
+  --color-elevation: #252526; // Lightest (right panel)
+
+  // Primary Colors
+  --color-primary: #0e639c; // VS Code blue
+  --color-primary-light: #3794ff; // VS Code focused element
+  --color-primary-dark: #094771; // VS Code darker blue
+
+  // Secondary Colors
+  --color-secondary: #3794ff; // VS Code links
+  --color-secondary-light: #40a6ff;
+  --color-secondary-dark: #2882e0;
+
+  // Status Colors
+  --color-success: #89d185; // VS Code green
+  --color-warning: #cca700; // VS Code yellow
+  --color-error: #f48771; // VS Code red
+  --color-info: #75beff; // VS Code info blue
+
+  // Text Colors
+  --color-text-primary: #cccccc; // VS Code primary text
+  --color-text-secondary: #858585; // VS Code secondary text
+  --color-text-disabled: #6b6b6b;
+
+  // Border Colors
+  --color-border: #474747; // VS Code borders
+  --color-divider: #404040; // VS Code separators
+
+  // Hover and Active States
+  --color-hover: #2a2d2e; // VS Code list hover
+  --color-active: #37373d; // VS Code selected item
+
+  // Scrollbar
+  --color-scrollbar-thumb: #424242;
+  --color-scrollbar-track: #1e1e1e;
+}
