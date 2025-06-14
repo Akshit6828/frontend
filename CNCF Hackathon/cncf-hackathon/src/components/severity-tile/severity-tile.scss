@@ -1,0 +1,21 @@
+.severity-tile {
+  flex: 1;
+  padding: 20px;
+  background-color: var(--color-surface);
+  border: 2px solid;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.2s;
+
+  h2 {
+    margin: 0 0 10px;
+    font-size: 18px;
+  }
+
+  .count {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--color-text-primary);
+  }
+}

@@ -1,0 +1,77 @@
+.repo-tile {
+  background: linear-gradient(135deg, #1e1e1e, #2c2c2c);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 24px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: var(--color-text-primary);
+
+  &:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  }
+
+  .tile-header {
+    h2 {
+      margin: 0;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--color-primary-light);
+    }
+  }
+
+  .vulnerability-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+
+    .vuln-count {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      font-weight: bold;
+      color: white;
+
+      &.danger {
+        background-color: #ff4c4c;
+      }
+
+      &.safe {
+        background-color: #4caf50;
+      }
+    }
+
+    .vuln-label {
+      margin-top: 8px;
+      font-size: 14px;
+      color: var(--color-text-secondary);
+    }
+  }
+
+  .view-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: var(--color-primary-dark);
+    }
+  }
+}
