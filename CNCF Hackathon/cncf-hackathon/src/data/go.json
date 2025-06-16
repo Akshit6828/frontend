@@ -1,0 +1,269 @@
+{
+  "SchemaVersion": 2,
+  "CreatedAt": "2025-06-14T16:13:07.976347+05:30",
+  "ArtifactName": "go-app",
+  "ArtifactType": "container_image",
+  "Metadata": {
+    "OS": {
+      "Family": "alpine",
+      "Name": "3.22.0"
+    },
+    "ImageID": "sha256:ff4677221e8351f6be9a9025c23dabb72109fdd9f2f50cfc9a7b9f98746945db",
+    "DiffIDs": [
+      "sha256:1231a673589ac9e2f8a98ed916d1fa8301b36a44dd14fc40eba5a05905da69f1",
+      "sha256:ee8ea5de7080090f509185b92548ded775abe09172d141f67f13d5c96fed4df1",
+      "sha256:638cd30ba438552666ebc1e0e8d1851d1efbc88addf655889bc48a5da31d0880",
+      "sha256:63129434f79211a3b3403177b2afec4c1ae65e749b16395e46c4dbacf04a9db9",
+      "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+      "sha256:65143506dacbaf617fb8ad5c3dbf5dc24e336b69fb01da6986f5467cf7a24b8d",
+      "sha256:b6911594f4367cef4801d0c35f9bc2f028730f20384b15dccbb53db9048ca15d",
+      "sha256:1a8b6665ecd5d5e8d4d5f28a01137315bbfd116594888edf126b49cee041c35b",
+      "sha256:fdaa32fb91c30922bfe3993183ae5afe4140ffc14b8c8a9f070f6a369654d109",
+      "sha256:1eb71ef51d39291ea87facee39a62ec2b4fc66a983b482cf70750e80ce6ec3d6"
+    ],
+    "RepoTags": ["go-app:latest"],
+    "RepoDigests": [
+      "go-app@sha256:ff4677221e8351f6be9a9025c23dabb72109fdd9f2f50cfc9a7b9f98746945db"
+    ],
+    "ImageConfig": {
+      "architecture": "arm64",
+      "created": "2025-06-14T10:42:02.52914838Z",
+      "history": [
+        {
+          "created": "2025-05-30T16:20:41Z",
+          "created_by": "ADD alpine-minirootfs-3.22.0-aarch64.tar.gz / # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2025-05-30T16:20:41Z",
+          "created_by": "CMD [\"/bin/sh\"]",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2025-06-05T18:53:13Z",
+          "created_by": "RUN /bin/sh -c apk add --no-cache ca-certificates # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2025-06-05T18:53:13Z",
+          "created_by": "ENV GOLANG_VERSION=1.24.4",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2025-06-05T18:53:13Z",
+          "created_by": "ENV GOTOOLCHAIN=local",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2025-06-05T18:53:13Z",
+          "created_by": "ENV GOPATH=/go",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2025-06-05T18:53:13Z",
+          "created_by": "ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2025-06-05T18:53:13Z",
+          "created_by": "COPY /target/ / # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2025-06-05T18:53:13Z",
+          "created_by": "RUN /bin/sh -c mkdir -p \"$GOPATH/src\" \"$GOPATH/bin\" \u0026\u0026 chmod -R 1777 \"$GOPATH\" # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2025-06-05T18:53:13Z",
+          "created_by": "WORKDIR /go",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2025-06-14T10:41:54Z",
+          "created_by": "WORKDIR /app",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2025-06-14T10:41:54Z",
+          "created_by": "COPY go.mod . # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2025-06-14T10:41:54Z",
+          "created_by": "COPY *.go . # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2025-06-14T10:41:54Z",
+          "created_by": "RUN /bin/sh -c go mod tidy # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2025-06-14T10:42:02Z",
+          "created_by": "RUN /bin/sh -c CGO_ENABLED=0 go build -o /server # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2025-06-14T10:42:02Z",
+          "created_by": "EXPOSE map[8080/tcp:{}]",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2025-06-14T10:42:02Z",
+          "created_by": "CMD [\"/server\"]",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        }
+      ],
+      "os": "linux",
+      "rootfs": {
+        "type": "layers",
+        "diff_ids": [
+          "sha256:1231a673589ac9e2f8a98ed916d1fa8301b36a44dd14fc40eba5a05905da69f1",
+          "sha256:ee8ea5de7080090f509185b92548ded775abe09172d141f67f13d5c96fed4df1",
+          "sha256:638cd30ba438552666ebc1e0e8d1851d1efbc88addf655889bc48a5da31d0880",
+          "sha256:63129434f79211a3b3403177b2afec4c1ae65e749b16395e46c4dbacf04a9db9",
+          "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+          "sha256:65143506dacbaf617fb8ad5c3dbf5dc24e336b69fb01da6986f5467cf7a24b8d",
+          "sha256:b6911594f4367cef4801d0c35f9bc2f028730f20384b15dccbb53db9048ca15d",
+          "sha256:1a8b6665ecd5d5e8d4d5f28a01137315bbfd116594888edf126b49cee041c35b",
+          "sha256:fdaa32fb91c30922bfe3993183ae5afe4140ffc14b8c8a9f070f6a369654d109",
+          "sha256:1eb71ef51d39291ea87facee39a62ec2b4fc66a983b482cf70750e80ce6ec3d6"
+        ]
+      },
+      "config": {
+        "Cmd": ["/server"],
+        "Env": [
+          "PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+          "GOLANG_VERSION=1.24.4",
+          "GOTOOLCHAIN=local",
+          "GOPATH=/go"
+        ],
+        "WorkingDir": "/app",
+        "ExposedPorts": {
+          "8080": {}
+        },
+        "ArgsEscaped": true
+      }
+    }
+  },
+  "Results": [
+    {
+      "Target": "go-app (alpine 3.22.0)",
+      "Class": "os-pkgs",
+      "Type": "alpine"
+    },
+    {
+      "Target": "server",
+      "Class": "lang-pkgs",
+      "Type": "gobinary"
+    },
+    {
+      "Target": "usr/local/go/bin/go",
+      "Class": "lang-pkgs",
+      "Type": "gobinary"
+    },
+    {
+      "Target": "usr/local/go/bin/gofmt",
+      "Class": "lang-pkgs",
+      "Type": "gobinary"
+    },
+    {
+      "Target": "usr/local/go/pkg/tool/linux_arm64/addr2line",
+      "Class": "lang-pkgs",
+      "Type": "gobinary"
+    },
+    {
+      "Target": "usr/local/go/pkg/tool/linux_arm64/asm",
+      "Class": "lang-pkgs",
+      "Type": "gobinary"
+    },
+    {
+      "Target": "usr/local/go/pkg/tool/linux_arm64/buildid",
+      "Class": "lang-pkgs",
+      "Type": "gobinary"
+    },
+    {
+      "Target": "usr/local/go/pkg/tool/linux_arm64/cgo",
+      "Class": "lang-pkgs",
+      "Type": "gobinary"
+    },
+    {
+      "Target": "usr/local/go/pkg/tool/linux_arm64/compile",
+      "Class": "lang-pkgs",
+      "Type": "gobinary"
+    },
+    {
+      "Target": "usr/local/go/pkg/tool/linux_arm64/covdata",
+      "Class": "lang-pkgs",
+      "Type": "gobinary"
+    },
+    {
+      "Target": "usr/local/go/pkg/tool/linux_arm64/cover",
+      "Class": "lang-pkgs",
+      "Type": "gobinary"
+    },
+    {
+      "Target": "usr/local/go/pkg/tool/linux_arm64/doc",
+      "Class": "lang-pkgs",
+      "Type": "gobinary"
+    },
+    {
+      "Target": "usr/local/go/pkg/tool/linux_arm64/fix",
+      "Class": "lang-pkgs",
+      "Type": "gobinary"
+    },
+    {
+      "Target": "usr/local/go/pkg/tool/linux_arm64/link",
+      "Class": "lang-pkgs",
+      "Type": "gobinary"
+    },
+    {
+      "Target": "usr/local/go/pkg/tool/linux_arm64/nm",
+      "Class": "lang-pkgs",
+      "Type": "gobinary"
+    },
+    {
+      "Target": "usr/local/go/pkg/tool/linux_arm64/objdump",
+      "Class": "lang-pkgs",
+      "Type": "gobinary"
+    },
+    {
+      "Target": "usr/local/go/pkg/tool/linux_arm64/pack",
+      "Class": "lang-pkgs",
+      "Type": "gobinary"
+    },
+    {
+      "Target": "usr/local/go/pkg/tool/linux_arm64/pprof",
+      "Class": "lang-pkgs",
+      "Type": "gobinary"
+    },
+    {
+      "Target": "usr/local/go/pkg/tool/linux_arm64/preprofile",
+      "Class": "lang-pkgs",
+      "Type": "gobinary"
+    },
+    {
+      "Target": "usr/local/go/pkg/tool/linux_arm64/test2json",
+      "Class": "lang-pkgs",
+      "Type": "gobinary"
+    },
+    {
+      "Target": "usr/local/go/pkg/tool/linux_arm64/trace",
+      "Class": "lang-pkgs",
+      "Type": "gobinary"
+    },
+    {
+      "Target": "usr/local/go/pkg/tool/linux_arm64/vet",
+      "Class": "lang-pkgs",
+      "Type": "gobinary"
+    }
+  ]
+}
