@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script>
+function dragstartHandler(ev) {
+  ev.dataTransfer.setData("key", ev.target.id);
+  console.log("start");
+  
+    console.log(ev.target);
+}
+
+function dragoverHandler(ev) {
+  ev.preventDefault();
+}
+
+function dropHandler(ev) {
+  ev.preventDefault();
+  const data = ev.dataTransfer.getData("key");
+  console.log("drop");
+  
+  console.log(ev.target);
+
+  
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
+</head>
+<body>
+
+<div id="div1" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)">
+    Hello
+</div>
+
+<br>
+<br>
+<br>
+
+<img id="img1" src="https://picsum.photos/id/237/200/300" draggable="true" ondragstart="dragstartHandler(event)" width="336" height="69">
+
+</body>
+</html>
