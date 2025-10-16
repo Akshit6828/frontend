@@ -1,0 +1,9 @@
+.container-lhs {
+  background-color: rgba(0, 2, 1, 0.676);
+  width: fit-content;
+  padding: 16px;
+  border-radius: 0px 0px 4px 4px;
+  color: rgb(255, 255, 255);
+  height: 100vh;
+
+}
